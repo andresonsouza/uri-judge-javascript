@@ -14,5 +14,14 @@ function ordenarLista(lista) {
     return listaOrdenada;
 }
 
+// var exibirLista = ordenarLista(entrada);
+// console.log(`${exibirLista[0]}\n${exibirLista[1]}\n${exibirLista[2]}\n\n${entrada1}\n${entrada2}\n${entrada3}`);
+
 var exibirLista = ordenarLista(entrada);
-console.log(`${exibirLista[0]}\n${exibirLista[1]}\n${exibirLista[2]}\n\n${entrada1}\n${entrada2}\n${entrada3}`);
+console.log(exibirLista[0]);
+console.log(exibirLista[1]);
+console.log(exibirLista[2]);
+console.log();
+console.log(entrada1);
+console.log(entrada2);
+console.log(entrada3);
