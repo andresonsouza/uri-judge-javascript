@@ -19,9 +19,15 @@ function selecionarPositivos(item, indice) {
         novoIndice++;
     }
 }
+
 numeros.forEach(selecionarPositivos);
 
-console.log(somarValores(numeros));
-console.log(positivos.length + " valores positivos");
+var total = positivos.reduce(getTotal, 0);
 
-// FINALIZAR
+function getTotal(total, item) {
+    return total + item;
+}
+
+var media = total / positivos.length;
+console.log(positivos.length + " valores positivos");
+console.log(media);
