@@ -9,25 +9,15 @@ var D = parseFloat(valores.shift());
 var E = parseFloat(valores.shift());
 var F = parseFloat(valores.shift());
 
-var numeros = [A, B, C, D, E, F]
-var positivos = [];
-var novoIndice = 0;
+var numeros = [A, B, C, D, E, F];
 
-function selecionarPositivos(item, indice) {
-    if (numeros[indice] > 0 & numeros[indice] !== 0) {
-        positivos[novoIndice] = numeros[indice];
-        novoIndice++;
-    }
+const numerosPositivos = numero => numero > 0 & numero !== 0;
+const itensValidos = numeros.filter(numerosPositivos);
+
+var total = 0;
+for (let i = 0; i < itensValidos.length; i++) {
+    total += itensValidos[i];
 }
 
-numeros.forEach(selecionarPositivos);
-
-var total = positivos.reduce(getTotal, 0);
-
-function getTotal(total, item) {
-    return total + item;
-}
-
-var media = total / positivos.length;
-console.log(positivos.length + " valores positivos");
-console.log(media);
+console.log(itensValidos.length + " valores positivos");
+console.log((total / itensValidos.length).toFixed(1));
